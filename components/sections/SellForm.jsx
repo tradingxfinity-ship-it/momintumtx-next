@@ -43,7 +43,8 @@ function CloseIcon() {
   )
 }
 
-const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 
 export default function SellForm() {
   const fileRef = useRef(null)
@@ -90,33 +91,34 @@ export default function SellForm() {
     setError('')
     setLoading(true)
 
-    if (!FORMSPREE_ENDPOINT) {
+    if (!WEB3FORMS_ACCESS_KEY) {
       setLoading(false)
-      setError('Form endpoint not configured. Set NEXT_PUBLIC_FORMSPREE_ENDPOINT in .env.local.')
+      setError('Form access key not configured. Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in .env.local.')
       return
     }
 
     try {
       const data = new FormData()
+      data.append('access_key', WEB3FORMS_ACCESS_KEY)
+      data.append('subject', `New sell-card submission from ${form.name}`)
+      data.append('from_name', 'Momintum Sell Form')
+      data.append('replyto', form.email)
       data.append('name', form.name)
       data.append('email', form.email)
       data.append('phone', form.phone)
       data.append('description', form.description)
       data.append('card_types', cardTypes.join(', ') || '—')
       data.append('conditions', conditions.join(', ') || '—')
-      data.append('_subject', `New sell-card submission from ${form.name}`)
       previews.forEach((p, i) => data.append(`photo_${i + 1}`, p.file, p.name))
 
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         body: data,
-        headers: { Accept: 'application/json' },
       })
 
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}))
-        const msg = body?.errors?.map(e => e.message).join(', ') || `Submission failed (${res.status}).`
-        throw new Error(msg)
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok || !body.success) {
+        throw new Error(body.message || `Submission failed (${res.status}).`)
       }
 
       setSubmitted(true)
