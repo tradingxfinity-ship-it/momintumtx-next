@@ -7,6 +7,7 @@ import About from '../components/sections/About'
 import Products from '../components/sections/Products'
 import LiveBreaks from '../components/sections/LiveBreaks'
 import UpcomingEvents from '../components/sections/UpcomingEvents'
+import Events from '../components/sections/Events'
 import Gallery from '../components/sections/Gallery'
 import Reviews from '../components/sections/Reviews'
 import SellWithUs from '../components/sections/SellWithUs'
@@ -31,6 +32,7 @@ export default function Home() {
       <Products />
       <LiveBreaks />
       <UpcomingEvents />
+      <Events />
       <Gallery />
       <Reviews />
       <SellWithUs />

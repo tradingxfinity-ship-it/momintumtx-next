@@ -17,7 +17,7 @@ const fadeUp = {
 export default function Events() {
   return (
     <section
-      id="events"
+      id="tournaments"
       className="relative py-24 lg:py-32 overflow-hidden bg-brand-navy-dark"
     >
       {/* BG layers */}
