@@ -4,7 +4,6 @@ import Footer from '../components/layout/Footer'
 import Hero from '../components/sections/Hero'
 import Ticker from '../components/sections/Ticker'
 import About from '../components/sections/About'
-import Products from '../components/sections/Products'
 import LiveBreaks from '../components/sections/LiveBreaks'
 import UpcomingEvents from '../components/sections/UpcomingEvents'
 import Events from '../components/sections/Events'
@@ -29,7 +28,6 @@ export default function Home() {
       <Hero />
       <Ticker />
       <About />
-      <Products />
       <LiveBreaks />
       <UpcomingEvents />
       <Events />
