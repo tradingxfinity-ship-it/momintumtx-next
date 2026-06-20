@@ -75,7 +75,7 @@ export default function LiveBreaks() {
               transition={{ duration: 0.6, ease }}
               className="text-white/45 text-sm leading-relaxed mb-10 max-w-lg"
             >
-              Our main channel <span className="text-white/75 font-semibold">Hit Lab Breaks</span> features epic random team breaks with top-tier NBA and NFL cards. Our secondary channel <span className="text-white/75 font-semibold">Hit Lab Rips</span> covers Pokémon, One Piece, and fast-paced TCG rips.
+              Our channels <span className="text-white/75 font-semibold">Hit Lab Breaks</span> and <span className="text-white/75 font-semibold">Hit Lab Rips</span> feature Pokémon and One Piece live breaks — chase the chase cards, pull alongside the community, and ship straight to your door.
             </motion.p>
 
             <motion.div
