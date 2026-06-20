@@ -21,7 +21,7 @@ const contactDetails = [
       </svg>
     ),
     label: 'Phone',
-    value: '(210) 555-0000',
+    value: '+1 (210) 614-9425',
   },
   {
     icon: (
