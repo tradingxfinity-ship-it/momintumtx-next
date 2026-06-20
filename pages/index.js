@@ -5,7 +5,6 @@ import Hero from '../components/sections/Hero'
 import Ticker from '../components/sections/Ticker'
 import About from '../components/sections/About'
 import LiveBreaks from '../components/sections/LiveBreaks'
-import UpcomingEvents from '../components/sections/UpcomingEvents'
 import Events from '../components/sections/Events'
 import Gallery from '../components/sections/Gallery'
 import Reviews from '../components/sections/Reviews'
@@ -29,7 +28,6 @@ export default function Home() {
       <Ticker />
       <About />
       <LiveBreaks />
-      <UpcomingEvents />
       <Events />
       <Gallery />
       <Reviews />
