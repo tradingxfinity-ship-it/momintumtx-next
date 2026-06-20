@@ -3,7 +3,7 @@ import Button from '../ui/Button'
 import SectionHeader from '../ui/SectionHeader'
 
 const details = [
-  { icon: '📅', label: 'Every Friday', sub: 'Doors open & registration at 6:30 PM CST' },
+  { icon: '📅', label: 'Every Wednesday', sub: 'Doors open & registration at 6:30 PM CST' },
   { icon: '⏰', label: '7:00 PM CST',  sub: "Tournament begins — don't be late!" },
   { icon: '💵', label: '$10 Entry Fee', sub: 'Affordable competition for everyone' },
   { icon: '🎁', label: 'Box Split Prizes', sub: 'Top 3 finishers take home box splits' },
@@ -37,7 +37,7 @@ export default function Events() {
           >
             <SectionHeader
               eyebrow="Weekly Events"
-              title="Friday Night Tournaments"
+              title="Wednesday Night Tournaments"
               center={false}
               light
             />
@@ -46,7 +46,7 @@ export default function Events() {
               transition={{ duration: 0.55 }}
               className="text-white/55 text-base leading-relaxed mb-10"
             >
-              Prove your skills every Friday night at Momintum. Whether you&apos;re a
+              Prove your skills every Wednesday night at Momintum. Whether you&apos;re a
               seasoned competitor or just getting started, our weekly tournaments
               offer great competition, prizes, and community.
             </motion.p>
@@ -93,7 +93,7 @@ export default function Events() {
                 Next Tournament
               </p>
               <p className="font-bebas text-7xl text-brand-navy-dark tracking-wide leading-none mb-1">
-                Friday
+                Wednesday
               </p>
               <p className="text-brand-navy-mid font-bold text-lg mb-7">7:00 PM CST</p>
               <div className="h-px bg-slate-100 mb-6" />
