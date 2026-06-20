@@ -108,9 +108,6 @@ export default function Events() {
                   </div>
                 ))}
               </div>
-              <Button href="#contact" variant="primary" size="lg" className="w-full">
-                Reserve Your Spot
-              </Button>
             </div>
 
             {/* Mini info pill */}
