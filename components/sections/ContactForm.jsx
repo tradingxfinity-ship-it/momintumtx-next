@@ -31,7 +31,7 @@ const contactDetails = [
       </svg>
     ),
     label: 'Email',
-    value: 'info@momintumtx.com',
+    value: 'Contact@momintumtx.com',
   },
   {
     icon: (
@@ -41,7 +41,7 @@ const contactDetails = [
       </svg>
     ),
     label: 'Hours',
-    value: 'Mon–Sat: 11AM – 8PM\nSun: 12PM – 6PM',
+    value: 'Mon–Sat: 11AM – 7PM\nSun: 12PM – 6PM',
   },
 ]
 
