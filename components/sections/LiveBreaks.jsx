@@ -83,8 +83,8 @@ export default function LiveBreaks() {
               transition={{ duration: 0.5, ease }}
               className="flex flex-wrap gap-3"
             >
-              <Button href="https://www.whatnot.com" variant="primary" size="lg">
-                Watch on Whatnot →
+              <Button variant="primary" size="lg" disabled className="cursor-default">
+                Coming Soon on Whatnot
               </Button>
             </motion.div>
 
