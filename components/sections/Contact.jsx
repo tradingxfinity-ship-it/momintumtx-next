@@ -47,7 +47,7 @@ export default function Contact() {
           {/* Floating directions button */}
           <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
             <a
-              href="https://maps.google.com/?q=7121+W+US+Hwy+90+%23214,+San+Antonio,+TX+78227"
+              href="https://maps.app.goo.gl/NZpW3ceiDP5zFAXV8?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-brand-navy-dark text-white text-sm font-bold rounded-full shadow-xl hover:bg-brand-navy transition-colors duration-200"

@@ -257,7 +257,7 @@ export default function Reviews() {
           </h2>
 
           <a
-            href="https://g.page/r/write-a-review"
+            href="https://share.google/KqPuj9aNYwZwv93Jh"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-6 px-6 py-2.5 bg-brand-navy-dark text-white text-sm font-semibold rounded-full hover:bg-brand-navy transition-colors duration-200"
