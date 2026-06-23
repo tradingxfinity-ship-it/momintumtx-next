@@ -45,19 +45,54 @@ const contactDetails = [
   },
 ]
 
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
+
 export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const inputCls = 'w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow/50 transition-all duration-200'
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setError('')
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1000))
-    setLoading(false)
-    setSent(true)
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setLoading(false)
+      setError('Form access key not configured. Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in .env.local.')
+      return
+    }
+
+    try {
+      const data = new FormData()
+      data.append('access_key', WEB3FORMS_ACCESS_KEY)
+      data.append('subject', `New contact message from ${form.name}`)
+      data.append('from_name', 'Momintum Contact Form')
+      data.append('replyto', form.email)
+      data.append('name', form.name)
+      data.append('email', form.email)
+      data.append('message', form.message)
+
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        body: data,
+      })
+
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok || !body.success) {
+        throw new Error(body.message || `Submission failed (${res.status}).`)
+      }
+
+      setSent(true)
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -139,7 +174,7 @@ export default function ContactForm() {
               <h3 className="font-bebas text-4xl text-white tracking-wide mb-3">Message Sent!</h3>
               <p className="text-white/50 mb-8">We'll get back to you as soon as possible.</p>
               <button
-                onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
+                onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); setError('') }}
                 className="text-sm font-semibold text-brand-yellow hover:text-brand-yellow-dark transition-colors"
               >
                 Send another →
@@ -167,6 +202,12 @@ export default function ContactForm() {
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                   className={`${inputCls} resize-none`} />
               </div>
+
+              {error && (
+                <div className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                  {error}
+                </div>
+              )}
 
               <button type="submit" disabled={loading}
                 className="w-full py-4 bg-brand-yellow text-brand-navy-dark text-sm font-bold rounded-full hover:bg-brand-yellow-dark transition-colors duration-200 disabled:opacity-60 flex items-center justify-center gap-2"
