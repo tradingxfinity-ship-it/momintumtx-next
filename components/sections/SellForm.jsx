@@ -45,6 +45,22 @@ function CloseIcon() {
 
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
+const IMGBB_API_KEY = process.env.NEXT_PUBLIC_IMGBB_API_KEY
+
+// Uploads one image to ImgBB and returns its hosted URL.
+async function uploadToImgbb(file) {
+  const fd = new FormData()
+  fd.append('image', file)
+  const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+    method: 'POST',
+    body: fd,
+  })
+  const body = await res.json().catch(() => ({}))
+  if (!res.ok || !body?.data?.url) {
+    throw new Error(`Couldn't upload "${file.name}". Please try again.`)
+  }
+  return body.data.url
+}
 
 export default function SellForm() {
   const fileRef = useRef(null)
@@ -97,7 +113,16 @@ export default function SellForm() {
       return
     }
 
+    if (previews.length > 0 && !IMGBB_API_KEY) {
+      setLoading(false)
+      setError('Image host not configured. Set NEXT_PUBLIC_IMGBB_API_KEY in .env.local.')
+      return
+    }
+
     try {
+      // Upload photos to ImgBB first, then pass the hosted links to Web3Forms.
+      const photoUrls = await Promise.all(previews.map(p => uploadToImgbb(p.file)))
+
       const data = new FormData()
       data.append('access_key', WEB3FORMS_ACCESS_KEY)
       data.append('subject', `New sell-card submission from ${form.name}`)
@@ -109,7 +134,7 @@ export default function SellForm() {
       data.append('description', form.description)
       data.append('card_types', cardTypes.join(', ') || '—')
       data.append('conditions', conditions.join(', ') || '—')
-      previews.forEach((p, i) => data.append(`photo_${i + 1}`, p.file, p.name))
+      data.append('photos', photoUrls.length ? photoUrls.join('\n') : 'No photos uploaded')
 
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
