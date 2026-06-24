@@ -1,3 +1,4 @@
+// Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY and NEXT_PUBLIC_IMGBB_API_KEY at build time.
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 

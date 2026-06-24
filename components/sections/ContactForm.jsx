@@ -1,3 +1,4 @@
+// Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY at build time.
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
