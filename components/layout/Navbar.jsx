@@ -29,7 +29,7 @@ const FacebookIcon = () => (
 const socials = [
   { href: 'https://instagram.com/momintumsportscards',                    label: 'Instagram', Icon: InstagramIcon },
   { href: 'https://www.facebook.com/share/1HWTY8nVTU/?mibextid=wwXIfr',   label: 'Facebook',  Icon: FacebookIcon  },
-  { href: 'https://www.whatnot.com',                                      label: 'Whatnot',   Icon: WhatnotIcon   },
+  { href: 'https://www.whatnot.com/s/HPUWASY3',                           label: 'Whatnot',   Icon: WhatnotIcon   },
 ]
 
 export default function Navbar() {
