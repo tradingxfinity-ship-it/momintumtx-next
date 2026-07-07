@@ -28,39 +28,27 @@ export default function Shop() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-brand-navy-dark pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
-        {/* Background banner */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/shop-hero.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
-        />
-        {/* Darkening overlay so the text stays readable over the art */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-navy-dark/85 via-brand-navy-dark/70 to-brand-navy-dark/90 pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease }}
-            className="text-brand-yellow text-xs font-bold tracking-[0.25em] uppercase mb-4"
-          >
-            Shop Online
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease, delay: 0.1 }}
-            className="font-bebas text-white leading-none tracking-wide mb-5"
-            style={{ fontSize: 'clamp(2.75rem, 6vw, 5.5rem)' }}
-          >
-            The <span className="text-brand-yellow">Card Shop</span>
-          </motion.h1>
+      <section className="relative bg-brand-navy-dark overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow z-20" />
+
+        {/* Full branded banner */}
+        <div className="relative pt-20 lg:pt-24">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/shop-hero.png"
+            alt="Momintum — sports cards, Pokémon and more"
+            className="w-full h-auto object-contain select-none"
+          />
+          {/* Subtle fade so the banner blends into the section below */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-navy-dark to-transparent pointer-events-none" />
+        </div>
+
+        {/* Tagline below the banner */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center pb-14 lg:pb-16 -mt-6">
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease, delay: 0.2 }}
-            className="text-white/55 text-base md:text-lg max-w-xl mx-auto"
+            transition={{ duration: 0.6, ease, delay: 0.1 }}
+            className="text-white/60 text-base md:text-lg max-w-xl mx-auto"
           >
             Browse our inventory and check out with PayPal. Choose <span className="text-white font-semibold">in-store pickup</span> in San Antonio or <span className="text-white font-semibold">delivery</span> to your door.
           </motion.p>
