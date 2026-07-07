@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
-  { label: 'About',  href: '#about' },
-  { label: 'Sell',   href: '#sell' },
-  { label: 'Events', href: '#events' },
-  { label: 'Reviews', href: '#reviews' },
+  { label: 'Shop',   href: '/shop' },
+  { label: 'About',  href: '/#about' },
+  { label: 'Sell',   href: '/#sell' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Reviews', href: '/#reviews' },
 ]
 
 const InstagramIcon = () => (
@@ -81,7 +82,7 @@ export default function Navbar() {
 
             {/* Center — logo */}
             <div className="flex justify-center">
-              <a href="#" onClick={close}>
+              <a href="/" onClick={close}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo-white.png" alt="Momintum" className="h-8 w-auto" />
               </a>
@@ -104,14 +105,14 @@ export default function Navbar() {
                 ))}
               </div>
               <a
-                href="#contact"
+                href="/#contact"
                 className="hidden md:inline-flex px-5 py-2 bg-brand-yellow text-brand-navy-dark text-sm font-bold rounded-full hover:bg-brand-yellow-dark transition-colors duration-200"
               >
                 Visit Us
               </a>
               {/* Mobile visit us */}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={close}
                 className="md:hidden px-4 py-2 bg-brand-yellow text-brand-navy-dark text-xs font-bold rounded-full"
               >

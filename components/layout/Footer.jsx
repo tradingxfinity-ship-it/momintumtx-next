@@ -17,11 +17,12 @@ const FacebookIcon = () => (
 )
 
 const links = [
-  { label: 'About',   href: '#about' },
-  { label: 'Sell',    href: '#sell' },
-  { label: 'Events',  href: '#events' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Shop',    href: '/shop' },
+  { label: 'About',   href: '/#about' },
+  { label: 'Sell',    href: '/#sell' },
+  { label: 'Events',  href: '/#events' },
+  { label: 'Reviews', href: '/#reviews' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 const socials = [
