@@ -251,15 +251,35 @@ export default function Checkout() {
                           style={{ layout: 'vertical', color: 'gold', shape: 'pill', label: 'pay' }}
                           disabled={!canPay}
                           forceReRender={[total, fulfillment, canPay]}
-                          createOrder={(data, actions) => actions.order.create({
-                            purchase_units: [{
-                              amount: { value: total.toFixed(2), currency_code: 'USD' },
-                              description: `Momintum order (${count} item${count > 1 ? 's' : ''})`,
-                            }],
-                          })}
-                          onApprove={async (data, actions) => {
-                            const order = await actions.order.capture()
-                            await notifyShop(order?.id || data.orderID)
+                          createOrder={async () => {
+                            setError('')
+                            const res = await fetch('/api/paypal/create-order', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({
+                                items: items.map(i => ({ id: i.id, qty: i.qty })),
+                                fulfillment,
+                              }),
+                            })
+                            const data = await res.json().catch(() => ({}))
+                            if (!res.ok || !data.id) {
+                              setError(data.error || 'Could not start checkout. Please try again.')
+                              throw new Error(data.error || 'create-order failed')
+                            }
+                            return data.id
+                          }}
+                          onApprove={async (data) => {
+                            const res = await fetch('/api/paypal/capture-order', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({ orderID: data.orderID }),
+                            })
+                            const capture = await res.json().catch(() => ({}))
+                            if (!res.ok || capture.status !== 'COMPLETED') {
+                              setError(capture.error || 'Payment could not be completed. Please try again.')
+                              throw new Error(capture.error || 'capture failed')
+                            }
+                            await notifyShop(capture.captureId || data.orderID)
                             clearCart()
                             setPaid(true)
                           }}
