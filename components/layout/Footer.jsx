@@ -17,7 +17,6 @@ const FacebookIcon = () => (
 )
 
 const links = [
-  { label: 'Shop',    href: '/shop' },
   { label: 'About',   href: '/#about' },
   { label: 'Sell',    href: '/#sell' },
   { label: 'Events',  href: '/#events' },
