@@ -1,5 +1,15 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useCart } from '../../context/CartContext'
+
+const CartIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20">
+    <circle cx="9" cy="21" r="1" />
+    <circle cx="20" cy="21" r="1" />
+    <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+  </svg>
+)
 
 const links = [
   { label: 'About',  href: '/#about' },
@@ -35,6 +45,8 @@ const socials = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+  const { count, hydrated } = useCart()
+  const showCart = hydrated && count > 0
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -103,6 +115,22 @@ export default function Navbar() {
                   </a>
                 ))}
               </div>
+
+              {/* Cart — appears once there's something in it */}
+              {showCart && (
+                <Link
+                  href="/checkout"
+                  onClick={close}
+                  aria-label={`Cart, ${count} item${count > 1 ? 's' : ''}`}
+                  className="relative w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-white/8 transition-colors duration-200"
+                >
+                  <CartIcon />
+                  <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-brand-yellow text-brand-navy-dark text-[10px] font-bold flex items-center justify-center">
+                    {count}
+                  </span>
+                </Link>
+              )}
+
               <a
                 href="/#contact"
                 className="hidden md:inline-flex px-5 py-2 bg-brand-yellow text-brand-navy-dark text-sm font-bold rounded-full hover:bg-brand-yellow-dark transition-colors duration-200"
