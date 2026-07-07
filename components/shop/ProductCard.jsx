@@ -52,7 +52,7 @@ export default function ProductCard({ product }) {
           {product.description}
         </p>
 
-        <div className="flex items-center justify-between mt-auto">
+        <div className="flex flex-col gap-3 mt-auto">
           <span className="font-bebas text-2xl text-brand-navy-dark tracking-wide">
             {formatPrice(product.price)}
           </span>
@@ -61,7 +61,7 @@ export default function ProductCard({ product }) {
             type="button"
             disabled={soldOut || atMax}
             onClick={() => addItem(product)}
-            className="px-4 py-2 rounded-full text-xs font-bold transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-brand-yellow text-brand-navy-dark hover:bg-brand-yellow-dark"
+            className="w-full px-4 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-brand-yellow text-brand-navy-dark hover:bg-brand-yellow-dark"
           >
             {soldOut ? 'Sold Out' : atMax ? 'Max in cart' : inCart ? `Add · ${inCart} in cart` : 'Add to Cart'}
           </button>
