@@ -207,10 +207,18 @@ export default function Checkout() {
                         <button onClick={() => setQty(i.id, i.qty - 1)} className="w-5 h-5 rounded bg-white/10 text-white text-sm leading-none hover:bg-white/20">−</button>
                         <span className="text-white/70 text-xs w-5 text-center">{i.qty}</span>
                         <button onClick={() => setQty(i.id, i.qty + 1)} className="w-5 h-5 rounded bg-white/10 text-white text-sm leading-none hover:bg-white/20">+</button>
-                        <button onClick={() => removeItem(i.id)} className="ml-2 text-white/30 text-xs hover:text-red-400">Remove</button>
                       </div>
                     </div>
                     <span className="text-white text-sm font-semibold">{formatPrice(i.price * i.qty)}</span>
+                    <button
+                      onClick={() => removeItem(i.id)}
+                      aria-label={`Remove ${i.name}`}
+                      className="w-6 h-6 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-red-500/70 transition-colors flex-shrink-0"
+                    >
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" width="12" height="12">
+                        <path d="M3 3l10 10M13 3L3 13" />
+                      </svg>
+                    </button>
                   </div>
                 ))}
               </div>
