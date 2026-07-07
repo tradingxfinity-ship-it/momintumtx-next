@@ -29,6 +29,16 @@ export default function Shop() {
 
       {/* Hero */}
       <section className="relative bg-brand-navy-dark pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
+        {/* Background banner */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/shop-hero.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+        />
+        {/* Darkening overlay so the text stays readable over the art */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-navy-dark/85 via-brand-navy-dark/70 to-brand-navy-dark/90 pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
