@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useCart } from '../../context/CartContext'
 
@@ -18,8 +19,8 @@ export default function ProductCard({ product }) {
       transition={{ duration: 0.45, ease }}
       className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
     >
-      {/* Image */}
-      <div className="relative aspect-[4/5] bg-slate-100 overflow-hidden flex items-center justify-center p-4">
+      {/* Image (links to detail page) */}
+      <Link href={`/shop/${product.id}`} className="relative block aspect-[4/5] bg-slate-100 overflow-hidden flex items-center justify-center p-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={product.image}
@@ -41,13 +42,15 @@ export default function ProductCard({ product }) {
             </span>
           </div>
         )}
-      </div>
+      </Link>
 
       {/* Body */}
       <div className="flex flex-col flex-1 p-5">
-        <h3 className="font-bold text-brand-navy-dark text-base leading-snug mb-1">
-          {product.name}
-        </h3>
+        <Link href={`/shop/${product.id}`} className="group/title">
+          <h3 className="font-bold text-brand-navy-dark text-base leading-snug mb-1 group-hover/title:text-brand-navy transition-colors">
+            {product.name}
+          </h3>
+        </Link>
         <p className="text-slate-500 text-xs leading-relaxed mb-4 flex-1">
           {product.description}
         </p>
