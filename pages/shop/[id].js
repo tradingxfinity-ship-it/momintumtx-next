@@ -8,24 +8,18 @@ import Footer from '../../components/layout/Footer'
 import CartBar from '../../components/shop/CartBar'
 import ProductCard, { formatPrice } from '../../components/shop/ProductCard'
 import { useCart } from '../../context/CartContext'
-import { PRODUCTS } from '../../data/products'
+import { supabase } from '../../lib/supabase'
 
 const ease = [0.22, 1, 0.36, 1]
 
-export async function getStaticPaths() {
-  return {
-    paths: PRODUCTS.map(p => ({ params: { id: p.id } })),
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  const product = PRODUCTS.find(p => p.id === params.id) || null
+export async function getServerSideProps({ params }) {
+  if (!supabase) return { notFound: true }
+  const { data: product } = await supabase.from('products').select('*').eq('id', params.id).single()
   if (!product) return { notFound: true }
-  const related = PRODUCTS
-    .filter(p => p.id !== product.id && p.category === product.category)
-    .slice(0, 4)
-  return { props: { product, related } }
+  const { data: related } = await supabase
+    .from('products').select('*')
+    .eq('category', product.category).neq('id', product.id).limit(4)
+  return { props: { product, related: related || [] } }
 }
 
 export default function ProductPage({ product, related }) {

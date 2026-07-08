@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     const { items, fulfillment } = req.body || {}
 
     // Recompute the price on the server — the client only sends ids + quantities.
-    const { lineItems, subtotal, deliveryFee, total } = priceOrder(items, fulfillment)
+    const { lineItems, subtotal, deliveryFee, total } = await priceOrder(items, fulfillment)
 
     if (!hasPayPalCredentials()) {
       return res.status(503).json({ error: 'Checkout is not configured yet. Please try again later.' })

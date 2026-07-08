@@ -277,10 +277,20 @@ export default function Checkout() {
                             return data.id
                           }}
                           onApprove={async (data) => {
+                            const address = isDelivery
+                              ? `${info.address}, ${info.city}, ${info.state} ${info.zip}`
+                              : `In-store pickup — ${SHOP_CONFIG.pickupLocation}`
                             const res = await fetch('/api/paypal/capture-order', {
                               method: 'POST',
                               headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify({ orderID: data.orderID }),
+                              body: JSON.stringify({
+                                orderID: data.orderID,
+                                order: {
+                                  name: info.name, email: info.email, phone: info.phone,
+                                  fulfillment, address,
+                                  items: items.map(i => ({ id: i.id, qty: i.qty })),
+                                },
+                              }),
                             })
                             const capture = await res.json().catch(() => ({}))
                             if (!res.ok || capture.status !== 'COMPLETED') {

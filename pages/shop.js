@@ -5,15 +5,25 @@ import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import ProductCard from '../components/shop/ProductCard'
 import CartBar from '../components/shop/CartBar'
-import { PRODUCTS, CATEGORIES } from '../data/products'
+import { CATEGORIES } from '../data/products'
+import { supabase } from '../lib/supabase'
 
 const ease = [0.22, 1, 0.36, 1]
 const FILTERS = ['All', ...CATEGORIES]
 
-export default function Shop() {
+export async function getServerSideProps() {
+  let products = []
+  if (supabase) {
+    const { data } = await supabase.from('products').select('*').order('created_at', { ascending: false })
+    products = data || []
+  }
+  return { props: { products } }
+}
+
+export default function Shop({ products }) {
   const [filter, setFilter] = useState('All')
 
-  const visible = PRODUCTS
+  const visible = products
     .filter(p => filter === 'All' || p.category === filter)
     .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
 
