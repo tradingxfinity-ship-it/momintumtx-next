@@ -12,7 +12,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jun 24, 2026',
     readTime: '7 min read',
-    thumb: { type: 'photo', src: '/store-1.jpg', overlay: 'from-brand-navy-dark/70 via-brand-navy-dark/20 to-transparent' },
+    thumb: { type: 'photo', src: '/blog-fanatics.webp', overlay: 'from-brand-navy-dark/70 via-brand-navy-dark/20 to-transparent' },
     content: [
       { type: 'p', text: 'The sports card hobby took another major step toward mainstream recognition at Fanatics Fest 2026, an event that attracted tens of thousands of collectors, athletes, dealers, content creators, grading companies, and hobby businesses under one roof. While autograph signings and celebrity appearances were major attractions, one of the biggest highlights was an extraordinary display of some of the most valuable and historically significant sports cards ever produced.' },
       { type: 'p', text: 'Collectors were given the rare opportunity to see legendary cards such as the 1952 Topps Mickey Mantle, the iconic T206 Honus Wagner, and several other hobby "grails" displayed together. Many of these cards have sold for millions of dollars in recent years and are rarely exhibited publicly due to their immense value and the security required to protect them. For many attendees, seeing these historic collectibles in person was comparable to visiting a museum filled with priceless works of art.' },
@@ -33,7 +33,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jul 15, 2026',
     readTime: '6 min read',
-    thumb: { type: 'photo', src: '/store-6.jpg', overlay: 'from-emerald-900/60 via-transparent to-transparent' },
+    thumb: { type: 'photo', src: '/blog-bowman.webp', overlay: 'from-emerald-900/60 via-transparent to-transparent' },
     content: [
       { type: 'p', text: 'The release of 2026 Bowman Baseball has once again become one of the most anticipated events of the sports card calendar, drawing tremendous excitement from collectors, investors, hobby shops, and online breakers around the world. Bowman has long been recognized as the premier brand for prospect collectors, offering fans their first officially licensed cards of baseball’s future stars before they reach the Major League level.' },
       { type: 'p', text: 'Within hours of release day, hobby stores across North America reported strong customer turnout as collectors lined up early to purchase hobby boxes and jumbo boxes. Online retailers quickly experienced inventory shortages as demand exceeded expectations, while sealed boxes immediately began selling above their suggested retail prices on secondary marketplaces.' },
@@ -55,7 +55,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jul 21, 2026',
     readTime: '6 min read',
-    thumb: { type: 'photo', src: '/store-9.jpg', overlay: 'from-purple-900/60 via-transparent to-transparent' },
+    thumb: { type: 'photo', src: '/blog-ohtani.webp', overlay: 'from-purple-900/60 via-transparent to-transparent' },
     content: [
       { type: 'p', text: 'Few athletes have transformed the sports card industry quite like Shohei Ohtani, whose extraordinary career continues to drive unprecedented demand across virtually every segment of the hobby. As one of baseball’s most recognizable global superstars, Ohtani has become a cornerstone of modern sports card collecting, with his rookie cards, autographs, and limited-edition releases consistently ranking among the most valuable contemporary collectibles.' },
       { type: 'p', text: 'Throughout 2026, collectors have continued aggressively pursuing Ohtani cards across auction platforms, hobby shops, online marketplaces, and major card shows. Dealers consistently report that Ohtani inventory sells quickly regardless of price point, while premium graded examples often receive multiple offers shortly after being listed.' },
