@@ -76,7 +76,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jul 22, 2026',
     readTime: '6 min read',
-    thumb: { type: 'photo', src: '/store-4.jpg', overlay: 'from-orange-900/60 via-transparent to-transparent' },
+    thumb: { type: 'photo', src: '/blog-topps-chrome.jpg', overlay: 'from-orange-900/60 via-transparent to-transparent' },
     content: [
       { type: 'p', text: 'After years away from producing licensed NBA trading cards, Topps Chrome Basketball is making a highly anticipated return, and excitement throughout the sports card hobby has reached fever pitch. Collectors have been eagerly awaiting the release ever since Fanatics acquired the NBA trading card license, and the upcoming 2025-26 Topps Chrome Update Basketball set is already one of the most talked-about releases of the summer.' },
       { type: 'p', text: 'One of the biggest selling points of the new product is its updated photography, featuring NBA stars in their current uniforms following major offseason trades. Fans will finally be able to collect officially licensed Chrome cards of players such as Luka Dončić in his new Los Angeles Lakers uniform, giving collectors something completely fresh compared to previous seasons.' },
@@ -95,7 +95,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jul 19, 2026',
     readTime: '5 min read',
-    thumb: { type: 'photo', src: '/store-7.jpg', overlay: 'from-slate-900/60 via-transparent to-transparent' },
+    thumb: { type: 'photo', src: '/blog-fanatics-panini.jpeg', overlay: 'from-slate-900/60 via-transparent to-transparent' },
     content: [
       { type: 'p', text: 'The sports card industry has experienced significant change over the past few years, and 2026 continues to be a defining period as Fanatics and Panini compete for dominance in one of the fastest-growing collectibles markets in the world. Licensing agreements, legal disputes, and product launches have transformed the landscape, creating both uncertainty and excitement for collectors.' },
       { type: 'p', text: 'One of the biggest developments has been the transition of major sports licenses from Panini to Topps under Fanatics. After holding exclusive rights to several professional sports leagues for years, Panini has gradually lost some of its most valuable licenses, opening the door for Topps to once again produce officially licensed football and basketball trading cards.' },
@@ -114,7 +114,7 @@ const posts = [
     author: 'Momintum Team',
     date: 'Jul 12, 2026',
     readTime: '6 min read',
-    thumb: { type: 'photo', src: '/store-10.jpg', overlay: 'from-brand-navy-dark/60 via-transparent to-transparent' },
+    thumb: { type: 'photo', src: '/blog-july-releases.jpeg', overlay: 'from-brand-navy-dark/60 via-transparent to-transparent' },
     content: [
       { type: 'p', text: 'July has become one of the busiest months on the sports card calendar, and 2026 is proving to be no exception. Collectors are preparing for a packed schedule of premium product releases across baseball, basketball, football, and other sports, creating one of the most exciting periods of the year for hobby shops, breakers, grading companies, and investors alike.' },
       { type: 'p', text: "Leading the month's lineup is 2026 Topps Chrome Baseball, a product that consistently ranks among the most popular annual baseball releases. Chrome's signature chromium finish, colorful refractor parallels, and highly sought-after rookie autographs continue to make it one of the hobby's flagship products. Collectors are especially excited about chasing the latest rookie class, with many hoping to pull future stars before their values rise significantly." },
