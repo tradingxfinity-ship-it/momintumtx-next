@@ -21,7 +21,6 @@ export default function Home() {
         <title>Momintum Cards & Collectibles — San Antonio, TX</title>
         <meta name="description" content="Sports cards, Pokémon, One Piece, graded slabs, sealed product, and collectibles. Live breaks, events, and we buy collections — walk in, get a fair offer, walk out with cash." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Hero />
