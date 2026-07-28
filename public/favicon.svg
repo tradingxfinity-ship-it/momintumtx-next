@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#021E33"/>
-  <path
-    d="M 118 372 L 118 150 L 190 150 L 256 268 L 322 150 L 394 150 L 394 372 L 330 372 L 330 250 L 278 344 L 234 344 L 182 250 L 182 372 Z"
-    fill="#FFE100"
-    transform="skewX(-9)"
-    transform-origin="256 256"/>
-</svg>
