@@ -135,7 +135,16 @@ export default function SellForm() {
       data.append('description', form.description)
       data.append('card_types', cardTypes.join(', ') || '—')
       data.append('conditions', conditions.join(', ') || '—')
-      data.append('photos', photoUrls.length ? photoUrls.join('\n') : 'No photos uploaded')
+
+      // Send ONE clean gallery link instead of a wall of raw URLs.
+      if (photoUrls.length) {
+        const compact = photoUrls.map(u => u.replace(/^https:\/\/i\.ibb\.co\//, '')).join(',')
+        const gallery = `${window.location.origin}/sell-photos?name=${encodeURIComponent(form.name)}&imgs=${encodeURIComponent(compact)}`
+        data.append('photo_count', `${photoUrls.length}`)
+        data.append('photos', gallery)
+      } else {
+        data.append('photos', 'No photos uploaded')
+      }
 
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
