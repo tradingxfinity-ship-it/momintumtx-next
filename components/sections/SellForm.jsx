@@ -1,6 +1,7 @@
-// Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY and NEXT_PUBLIC_IMGBB_API_KEY at build time.
+// Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY + Supabase env vars at build time.
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { supabase } from '../../lib/supabase'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -46,21 +47,24 @@ function CloseIcon() {
 
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
-const IMGBB_API_KEY = process.env.NEXT_PUBLIC_IMGBB_API_KEY
 
-// Uploads one image to ImgBB and returns its hosted URL.
-async function uploadToImgbb(file) {
-  const fd = new FormData()
-  fd.append('image', file)
-  const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+// Uploads one image straight to Supabase Storage via a server-signed URL,
+// then returns its public URL.
+async function uploadPhoto(file) {
+  const prep = await fetch('/api/sell-upload-url', {
     method: 'POST',
-    body: fd,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ filename: file.name }),
   })
-  const body = await res.json().catch(() => ({}))
-  if (!res.ok || !body?.data?.url) {
-    throw new Error(`Couldn't upload "${file.name}". Please try again.`)
+  const info = await prep.json().catch(() => ({}))
+  if (!prep.ok || !info.token) {
+    throw new Error(info.error || `Couldn't prepare upload for "${file.name}".`)
   }
-  return body.data.url
+  const { error } = await supabase.storage
+    .from('sell-uploads')
+    .uploadToSignedUrl(info.path, info.token, file)
+  if (error) throw new Error(`Couldn't upload "${file.name}". ${error.message}`)
+  return info.publicUrl
 }
 
 export default function SellForm() {
@@ -114,15 +118,15 @@ export default function SellForm() {
       return
     }
 
-    if (previews.length > 0 && !IMGBB_API_KEY) {
+    if (previews.length > 0 && !supabase) {
       setLoading(false)
-      setError('Image host not configured. Set NEXT_PUBLIC_IMGBB_API_KEY in .env.local.')
+      setError('Photo uploads are unavailable right now. Please try again in a moment, or remove the photos and submit — we\'ll follow up for them.')
       return
     }
 
     try {
-      // Upload photos to ImgBB first, then pass the hosted links to Web3Forms.
-      const photoUrls = await Promise.all(previews.map(p => uploadToImgbb(p.file)))
+      // Upload photos to Supabase Storage first, then pass the links to Web3Forms.
+      const photoUrls = await Promise.all(previews.map(p => uploadPhoto(p.file)))
 
       const data = new FormData()
       data.append('access_key', WEB3FORMS_ACCESS_KEY)
@@ -138,8 +142,8 @@ export default function SellForm() {
 
       // Send ONE clean gallery link instead of a wall of raw URLs.
       if (photoUrls.length) {
-        const compact = photoUrls.map(u => u.replace(/^https:\/\/i\.ibb\.co\//, '')).join(',')
-        const gallery = `${window.location.origin}/sell-photos?name=${encodeURIComponent(form.name)}&imgs=${encodeURIComponent(compact)}`
+        const imgs = photoUrls.join(',')
+        const gallery = `${window.location.origin}/sell-photos?name=${encodeURIComponent(form.name)}&imgs=${encodeURIComponent(imgs)}`
         data.append('photo_count', `${photoUrls.length}`)
         data.append('photos', gallery)
       } else {
