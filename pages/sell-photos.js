@@ -4,8 +4,13 @@ import { useState } from 'react'
 export function getServerSideProps({ query }) {
   const raw = typeof query.imgs === 'string' ? query.imgs : ''
   const name = typeof query.name === 'string' ? query.name : ''
+  const supaPrefix = `${process.env.NEXT_PUBLIC_SUPABASE_URL || ''}/storage/v1/object/public/sell-uploads/`
   const urls = raw
-    ? raw.split(',').filter(Boolean).map(p => (/^https?:\/\//.test(p) ? p : `https://i.ibb.co/${p}`))
+    ? raw.split(',').filter(Boolean).map(p => {
+        if (/^https?:\/\//.test(p)) return p          // full URL
+        if (p.includes('/')) return `https://i.ibb.co/${p}` // legacy ImgBB links
+        return `${supaPrefix}${p}`                    // Supabase filename
+      })
     : []
   return { props: { urls, name } }
 }

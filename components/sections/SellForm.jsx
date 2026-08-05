@@ -140,10 +140,12 @@ export default function SellForm() {
       data.append('card_types', cardTypes.join(', ') || '—')
       data.append('conditions', conditions.join(', ') || '—')
 
-      // Send ONE clean gallery link instead of a wall of raw URLs.
+      // Send ONE clean gallery link. Strip the shared Supabase prefix so the
+      // link stays short — the gallery page adds it back.
       if (photoUrls.length) {
-        const imgs = photoUrls.join(',')
-        const gallery = `${window.location.origin}/sell-photos?name=${encodeURIComponent(form.name)}&imgs=${encodeURIComponent(imgs)}`
+        const prefix = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/sell-uploads/`
+        const compact = photoUrls.map(u => (u.startsWith(prefix) ? u.slice(prefix.length) : u)).join(',')
+        const gallery = `${window.location.origin}/sell-photos?name=${encodeURIComponent(form.name)}&imgs=${encodeURIComponent(compact)}`
         data.append('photo_count', `${photoUrls.length}`)
         data.append('photos', gallery)
       } else {
