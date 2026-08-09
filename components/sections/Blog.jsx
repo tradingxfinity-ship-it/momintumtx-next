@@ -7,6 +7,98 @@ const posts = [
   {
     category: 'Hobby News',
     categoryColor: 'bg-blue-100 text-blue-700',
+    title: 'Pokémon Is Using Facial Recognition to Fight Card Scalpers',
+    excerpt: 'Stores in Japan are rolling out facial recognition to enforce purchase limits and keep scalpers from hoarding high-demand product — a sign of how big the hobby has gotten.',
+    author: 'Momintum Team',
+    date: 'Aug 8, 2026',
+    readTime: '7 min read',
+    thumb: { type: 'photo', src: '/blog-facial-recognition.jpeg', overlay: 'from-brand-navy-dark/70 via-brand-navy-dark/10 to-transparent' },
+    content: [
+      { type: 'p', text: "Getting your hands on a popular Pokémon TCG release can sometimes feel like a competition before you've even opened a booster pack. Highly anticipated products can sell quickly, purchase limits are common, and some products appear on secondary marketplaces shortly after release at significantly higher prices. Scalping has consequently become one of the biggest frustrations surrounding modern Pokémon card collecting." },
+      { type: 'p', text: "Now, Pokémon is experimenting with a much more technologically advanced response. Pokémon Card Stores in Japan have begun introducing facial recognition technology to help enforce purchase limits and prevent individuals from repeatedly buying high-demand Pokémon TCG products. It's an unusual development for a trading card hobby — and another indication of just how enormous the Pokémon card market has become." },
+      { type: 'h3', text: 'Why Pokémon Is Taking Scalping Seriously' },
+      { type: 'p', text: 'Pokémon cards have experienced massive collector interest over the last several years. Rare cards, illustration rares, vintage Pokémon cards, sealed booster boxes and professionally graded cards all have active collector communities.' },
+      { type: 'p', text: 'The problem comes when demand dramatically exceeds supply. When a highly anticipated product launches, some buyers attempt to purchase as much inventory as possible, and those products can then appear on secondary marketplaces at inflated prices. For regular collectors who simply want to open packs or add cards to their collections, the experience can be frustrating.' },
+      { type: 'p', text: "Retailers have tried various methods to combat this. Purchase limits are probably the most familiar — a store might restrict a customer to one box or a certain number of packs. But enforcing those limits isn't always easy. Someone could leave and return later, visit another checkout, or attempt to purchase the same product again. That's where facial recognition enters the picture." },
+      { type: 'h3', text: 'How the New System Works' },
+      { type: 'p', text: 'According to reports, participating Pokémon Card Stores in Japan are using facial recognition as part of their entry and purchasing system. The technology can help stores identify whether a customer has already visited and made their permitted purchase that day.' },
+      { type: 'p', text: "Instead of relying exclusively on employees remembering customers or checking traditional identification, the system provides another method for enforcing purchasing restrictions. The objective isn't to prevent collectors from buying cards — it's designed to stop individuals from repeatedly purchasing inventory intended to be distributed among many customers. For major releases, that could make a meaningful difference." },
+      { type: 'h3', text: 'Pokémon Has Already Tried Other Anti-Scalping Measures' },
+      { type: 'p', text: 'Facial recognition isn\'t the first strategy Pokémon has used. The market in Japan has already seen lottery-based purchasing systems for certain high-demand products. Rather than allowing everyone to rush to purchase at the same time, customers can enter a lottery for an opportunity to buy.' },
+      { type: 'p', text: 'Identity verification has also become part of certain Pokémon Center purchasing systems. These measures demonstrate how seriously Pokémon is treating the problem. A trading card release requiring lotteries, identity checks or facial recognition would have sounded extreme years ago — today, it reflects the enormous demand surrounding some Pokémon products.' },
+      { type: 'h3', text: 'What This Could Mean for Collectors' },
+      { type: 'p', text: 'For genuine collectors, stronger purchasing restrictions could ultimately be positive. If one customer can purchase only their permitted amount, more individual customers should theoretically have access to products at normal retail prices. That could make release days less frustrating.' },
+      { type: 'p', text: 'However, facial recognition introduces another conversation entirely. Some collectors may question whether biometric technology is an appropriate solution for purchasing trading cards. Privacy, data storage and how the information is handled are likely to become important considerations if systems like this expand. There\'s a balance Pokémon and retailers will need to maintain: collectors want fair access to products, but they also want purchasing systems that feel reasonable.' },
+      { type: 'h3', text: 'The Pokémon Card Hobby Is Bigger Than Ever' },
+      { type: 'p', text: 'Perhaps the most interesting part of this story is what it says about Pokémon cards themselves. The Pokémon TCG has evolved far beyond being simply a children\'s card game. There are competitive players, casual collectors, vintage collectors, sealed-product collectors, investors and people who collect specific Pokémon or artists.' },
+      { type: 'p', text: "A rare card can generate enormous attention online, major products can sell out quickly, and professionally graded Pokémon cards can become centerpiece collectibles. Pokémon's 30th anniversary in 2026 has created another wave of attention around the franchise, and that combination makes product availability increasingly important." },
+      { type: 'tip', text: 'At Momintum, we keep releases fair — reasonable purchase limits so real collectors get a shot at the product they came in for, not just resellers.' },
+      { type: 'p', text: 'Can Pokémon actually stop scalpers? Probably not completely — whenever a collectible has limited supply and strong demand, a resale market will exist. But Pokémon doesn\'t need to eliminate reselling; the more realistic goal is making it harder for a small group of buyers to dominate inventory before ordinary collectors have a chance. Purchase limits help, lotteries help, identity verification helps, and now facial recognition is becoming another tool. A hobby that began with kids trading cards in schoolyards now has stores using advanced technology to manage demand — and as the 30th anniversary celebrations continue, that demand isn\'t going anywhere.' },
+    ],
+  },
+  {
+    category: 'Pokémon TCG',
+    categoryColor: 'bg-orange-100 text-orange-700',
+    title: "Pokémon TCG Pocket's Ruler of the Skies Brings Hoenn Back Into the Spotlight",
+    excerpt: 'The Ruler of the Skies expansion (July 29) leans hard into Hoenn nostalgia — and shows how digital collecting has become its own corner of the hobby.',
+    author: 'Momintum Team',
+    date: 'Aug 6, 2026',
+    readTime: '6 min read',
+    thumb: { type: 'photo', src: '/blog-ruler-of-skies.avif', overlay: 'from-brand-navy-dark/70 via-brand-navy-dark/10 to-transparent' },
+    content: [
+      { type: 'p', text: 'Pokémon TCG Pocket continues to expand, and its latest major release brings players back to one of the most beloved regions in Pokémon history. Ruler of the Skies launched on July 29, 2026, introducing another collection of digital Pokémon cards and putting a strong focus on Pokémon associated with the Hoenn region.' },
+      { type: 'p', text: "For players who grew up with Pokémon Ruby, Sapphire and Emerald, that's immediately exciting. But Ruler of the Skies also highlights something bigger happening within the hobby: collecting Pokémon cards is no longer limited to physical binders. Digital collecting is becoming its own experience." },
+      { type: 'h3', text: 'Hoenn Returns to Pokémon Cards' },
+      { type: 'p', text: 'Hoenn first appeared as the setting for the third generation of Pokémon games. It introduced a huge collection of Pokémon that remain popular today and gave players some unforgettable legendary Pokémon, which makes it an obvious source of inspiration for a TCG Pocket expansion.' },
+      { type: 'p', text: "Ruler of the Skies takes advantage of that nostalgia while giving the Pokémon new digital card designs. For longtime fans, opening packs of familiar Hoenn Pokémon can bring back memories of exploring the region for the first time; for newer players, it's another chance to discover Pokémon from an earlier generation. That ability to appeal to multiple generations has always been one of Pokémon's greatest strengths." },
+      { type: 'h3', text: 'Why TCG Pocket Feels Different' },
+      { type: 'p', text: "Pokémon TCG Pocket isn't simply a digital copy of the physical Trading Card Game. The basic thrill of collecting remains familiar: you open packs, search for rare cards, build decks, compare collections, and every once in a while you pull the exact card you've been hoping for." },
+      { type: 'p', text: 'But digital cards give Pokémon additional creative possibilities. Artwork can be presented differently, cards can incorporate digital effects, and players can immediately use their collections without physical storage. There\'s no binder required, no worrying about card sleeves, and definitely no accidentally bending the corner of your favorite card. For collectors who enjoy both formats, Pocket offers a different way to interact with the Pokémon universe.' },
+      { type: 'h3', text: 'Ruler of the Skies Adds Another Chase' },
+      { type: 'p', text: 'Every Pokémon card expansion needs cards that make players want to keep opening packs — that\'s one of the core experiences that has kept the TCG popular for decades, and Ruler of the Skies continues that tradition digitally.' },
+      { type: 'p', text: "Instead of hunting for a physical illustration rare inside a booster box, players chase digital cards that can become highlights of their Pocket collection. And because the expansion focuses on Hoenn, nostalgia becomes part of that chase. A player might not want a card because it's the strongest option competitively — they might simply want it because it's a Pokémon they used years ago. That's the same emotional connection that drives plenty of physical card collections." },
+      { type: 'h3', text: 'New Events Keep the Expansion Moving' },
+      { type: 'p', text: 'A major advantage of digital card games is that releases don\'t need to end after launch day. TCG Pocket can introduce new events connected to an expansion, giving players reasons to return. An Emblem Event connected to Ruler of the Skies began in early August, encouraging players to battle and earn additional rewards.' },
+      { type: 'p', text: 'That creates a different rhythm from physical collecting. With physical cards, collectors might buy a booster box, organize their pulls and then search for missing cards. Pocket can continuously introduce new objectives around the same collection, which makes each expansion feel more active.' },
+      { type: 'h3', text: 'Digital vs. Physical Pokémon Cards' },
+      { type: 'p', text: 'The rise of TCG Pocket has created an interesting question: will digital cards eventually replace physical Pokémon cards? Probably not — the two experiences satisfy different parts of collecting.' },
+      { type: 'p', text: "Physical Pokémon cards can be held, traded, displayed and professionally graded; collectors can build binders, display slabs or keep sealed products for years. There's also something about physically opening a booster pack that digital games can't perfectly reproduce. TCG Pocket offers convenience — you can open packs and interact with your collection almost anywhere — and it lets Pokémon experiment with artwork in ways that wouldn't work on printed cardboard. Rather than competing, the two formats can complement each other." },
+      { type: 'p', text: "That's what makes Ruler of the Skies particularly interesting. Pokémon card collecting is no longer one single hobby: someone might collect vintage Base Set cards, another might focus on modern illustration rares, someone else on PSA-graded Charizards, and another might never own a large physical collection but have hundreds of cards inside TCG Pocket. All of them can still consider themselves Pokémon card collectors. With Pokémon celebrating its 30th anniversary in 2026 and the physical 30th Celebration expansion scheduled for September, Ruler of the Skies gives Pocket players their own major release during the party. Whether you're opening physical booster packs or tapping a screen, the feeling is the same: you're hoping the next card is the one you've been chasing." },
+    ],
+  },
+  {
+    category: 'New Releases',
+    categoryColor: 'bg-emerald-100 text-emerald-700',
+    title: "Pokémon's First Partner Illustration Collection Turns Starter Pokémon Into Collectible Art",
+    excerpt: 'Series 3 (Aug 7) turns starter Pokémon from Hoenn, Kalos and Paldea into illustration-rare promo art — a reminder that a card doesn\'t need a PSA 10 to be worth collecting.',
+    author: 'Momintum Team',
+    date: 'Aug 4, 2026',
+    readTime: '6 min read',
+    thumb: { type: 'photo', src: '/blog-first-partner.webp', overlay: 'from-brand-navy-dark/70 via-brand-navy-dark/10 to-transparent' },
+    content: [
+      { type: 'p', text: 'Every Pokémon fan remembers choosing a starter — maybe Charmander, maybe Mudkip, maybe Froakie, or maybe your first Pokémon adventure was much more recent. Whatever generation you started with, starter Pokémon tend to have a different kind of connection with fans. They\'re often the first Pokémon players intentionally choose, train and take through an entire game.' },
+      { type: 'p', text: 'Pokémon is celebrating that connection through the First Partner Illustration Collection, a series built around special illustration rare promo cards featuring starter Pokémon. The newest release, First Partner Illustration Collection — Series 3, arrived on August 7, 2026, bringing another group of starters into the collection. For collectors who care as much about artwork as rarity, it\'s one of the more interesting Pokémon TCG products this month.' },
+      { type: 'h3', text: 'Celebrating Different Generations of Pokémon' },
+      { type: 'p', text: 'Series 3 brings together first-partner Pokémon connected to Hoenn, Kalos and Paldea, giving the collection an interesting mix of generations. Hoenn represents an era many longtime fans grew up with, Kalos introduced another generation of players to Pokémon, and Paldea represents the much more recent Scarlet and Violet era.' },
+      { type: 'p', text: 'Putting those generations together demonstrates how long Pokémon has managed to keep attracting new fans. A parent who remembers playing Pokémon Ruby could now be collecting cards alongside someone whose first Pokémon adventure was Scarlet or Violet. The artwork becomes a bridge between those different eras.' },
+      { type: 'h3', text: "What's Actually Inside the Collection?" },
+      { type: 'p', text: 'Each Series 3 product includes a special promo booster containing three of nine possible illustration rare promo cards. The product also includes two regular Pokémon TCG booster packs and a sticker sheet.' },
+      { type: 'p', text: "The randomized promos create an additional collecting challenge. If you want all nine illustration rare starter cards, buying one collection won't automatically complete the set — collectors may need to open additional products or trade duplicates with others. That brings a little of the traditional Pokémon trading experience back into the product." },
+      { type: 'h3', text: 'Illustration Rares Changed Modern Pokémon Cards' },
+      { type: 'p', text: "One reason this collection is particularly relevant is the growing popularity of illustration rare cards. Modern collecting isn't exclusively about finding the rarest possible card — artwork has become a major part of the hobby. Illustration rares can show Pokémon sleeping, exploring cities, interacting with other Pokémon, or simply existing in beautifully illustrated environments." },
+      { type: 'p', text: "The result is that even Pokémon that aren't traditionally huge chase characters can receive cards collectors genuinely want. Some people now build entire binders around illustration rares, others collect cards from particular Pokémon artists, and some choose a specific Pokémon and try to find every major artwork ever released for it. That has made Pokémon TCG collections much more personal." },
+      { type: 'h3', text: 'Not Every Great Card Needs to Be Expensive' },
+      { type: 'p', text: "The First Partner Illustration Collection represents an important part of collecting that can disappear when card values dominate conversations online. A card doesn't need to cost hundreds or thousands of dollars, doesn't need a PSA 10, and doesn't need to be the rarest pull in an expansion. Sometimes you simply like the artwork — and that's enough." },
+      { type: 'p', text: 'Starter Pokémon work especially well for that style of collecting because people already have emotional connections to them. A Mudkip fan might want a Mudkip illustration rare regardless of its market price; someone whose first starter was Froakie could feel exactly the same way. That personal connection is part of what has kept Pokémon collecting alive for so long.' },
+      { type: 'h3', text: 'A Smaller Release Worth Watching' },
+      { type: 'p', text: "Series 3 might not generate the same hype as Pokémon's upcoming 30th Celebration expansion, and it won't create the same frenzy as the year's biggest booster sets. But that's exactly why collectors shouldn't overlook it. It's built around one of the simplest reasons people collect Pokémon cards: they love the Pokémon on them." },
+      { type: 'tip', text: 'Chasing a specific starter or artist? Stop by Momintum — singles and promos like these are exactly the kind of thing worth digging through, and we\'re happy to help you track one down.' },
+      { type: 'p', text: "With nine illustration rare promos, multiple generations represented, and some of the franchise's most recognizable starters involved, the First Partner Illustration Collection offers something different from the usual hunt for the biggest chase card. For collectors who love Pokémon artwork, starter Pokémon, or simply building a beautiful binder, Series 3 is one of August 2026's most interesting Pokémon TCG releases." },
+    ],
+  },
+  {
+    category: 'Hobby News',
+    categoryColor: 'bg-blue-100 text-blue-700',
     title: 'Fanatics Fest 2026 Brings the Sports Card Hobby Into the Mainstream',
     excerpt: 'Tens of thousands of collectors, athletes, and dealers packed the floor — including a rare public display of grails like the 1952 Mantle and T206 Wagner.',
     author: 'Momintum Team',
@@ -465,8 +557,21 @@ function PostCard({ post, delay, onClick }) {
   )
 }
 
+const PER_PAGE = 9 // 3 rows on the 3-column desktop grid
+
 export default function Blog() {
   const [active, setActive] = useState(null)
+  const [page, setPage] = useState(0)
+
+  const totalPages = Math.ceil(posts.length / PER_PAGE)
+  const visible = posts.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
+
+  const goToPage = (p) => {
+    setPage(p)
+    if (typeof document !== 'undefined') {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <section id="blog" className="bg-slate-50 py-24 lg:py-32 overflow-hidden">
@@ -495,11 +600,50 @@ export default function Blog() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post, i) => (
-            <PostCard key={i} post={post} delay={i * 0.07} onClick={() => setActive(post)} />
+        <div key={page} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {visible.map((post, i) => (
+            <PostCard key={`${page}-${i}`} post={post} delay={i * 0.05} onClick={() => setActive(post)} />
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-14">
+            <button
+              onClick={() => goToPage(page - 1)}
+              disabled={page === 0}
+              aria-label="Previous page"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-brand-navy-dark hover:border-brand-navy-dark disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><polyline points="15 18 9 12 15 6" /></svg>
+            </button>
+
+            {Array.from({ length: totalPages }).map((_, p) => (
+              <button
+                key={p}
+                onClick={() => goToPage(p)}
+                aria-label={`Page ${p + 1}`}
+                aria-current={p === page ? 'page' : undefined}
+                className={`w-10 h-10 flex items-center justify-center rounded-full text-sm font-bold transition-colors ${
+                  p === page
+                    ? 'bg-brand-navy-dark text-white'
+                    : 'bg-white border border-slate-200 text-slate-500 hover:border-brand-navy-dark hover:text-brand-navy-dark'
+                }`}
+              >
+                {p + 1}
+              </button>
+            ))}
+
+            <button
+              onClick={() => goToPage(page + 1)}
+              disabled={page === totalPages - 1}
+              aria-label="Next page"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-brand-navy-dark hover:border-brand-navy-dark disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><polyline points="9 18 15 12 9 6" /></svg>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Article modal */}
