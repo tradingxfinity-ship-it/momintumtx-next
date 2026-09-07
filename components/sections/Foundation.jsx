@@ -135,40 +135,67 @@ export default function Foundation() {
 
           {/* ─── Right: who we support ─── */}
           <motion.div
-            className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-3 backdrop-blur-sm"
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            className="relative"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease, delay: 0.15 }}
           >
-            {/* Yellow corner tab */}
-            <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-brand-yellow text-brand-navy-dark text-[10px] font-bold tracking-[0.15em] uppercase shadow-lg">
-              Who We Support
+            {/* Panel header */}
+            <div className="flex items-center gap-3 mb-5">
+              <span className="h-px flex-1 bg-gradient-to-r from-transparent to-brand-yellow/40" />
+              <span className="text-brand-yellow text-[11px] font-bold tracking-[0.25em] uppercase whitespace-nowrap">
+                Who We Support
+              </span>
+              <span className="h-px flex-1 bg-gradient-to-l from-transparent to-brand-yellow/40" />
             </div>
 
+            {/* 2×2 tile grid */}
             <motion.div
-              className="flex flex-col gap-2 pt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3.5"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ staggerChildren: 0.09, delayChildren: 0.25 }}
+              transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
             >
-              {GROUPS.map(({ label, sub, icon }) => (
+              {GROUPS.map(({ label, sub, icon }, i) => (
                 <motion.div
                   key={label}
                   variants={fadeUp}
                   transition={{ duration: 0.5, ease }}
-                  className="group flex items-center gap-4 rounded-2xl border border-transparent px-4 py-4 hover:border-brand-yellow/25 hover:bg-white/[0.04] transition-all duration-200"
+                  whileHover={{ y: -4 }}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-5 hover:border-brand-yellow/40 transition-colors duration-300"
                 >
-                  <span className="shrink-0 grid place-items-center w-12 h-12 rounded-xl bg-brand-yellow/12 text-brand-yellow border border-brand-yellow/20 group-hover:bg-brand-yellow group-hover:text-brand-navy-dark transition-colors duration-200">
+                  {/* Index watermark */}
+                  <span className="absolute -top-2 -right-1 font-bebas text-white/[0.06] group-hover:text-brand-yellow/15 transition-colors duration-300 leading-none select-none" style={{ fontSize: '4.5rem' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {/* Hover glow */}
+                  <span className="absolute inset-x-0 -bottom-16 h-24 bg-brand-yellow/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  <span className="relative z-10 inline-grid place-items-center w-12 h-12 rounded-xl bg-brand-yellow/12 text-brand-yellow border border-brand-yellow/25 group-hover:bg-brand-yellow group-hover:text-brand-navy-dark group-hover:scale-105 transition-all duration-300">
                     {icon}
                   </span>
-                  <div className="min-w-0">
-                    <p className="text-white font-semibold text-[15px] leading-tight">{label}</p>
-                    <p className="text-white/45 text-xs mt-0.5 leading-snug">{sub}</p>
-                  </div>
+                  <p className="relative z-10 mt-4 text-white font-bold text-[15px] leading-tight">{label}</p>
+                  <p className="relative z-10 mt-1.5 text-white/45 text-xs leading-snug">{sub}</p>
                 </motion.div>
               ))}
+            </motion.div>
+
+            {/* Footer strip */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-3.5 flex items-center gap-3 rounded-2xl border border-brand-yellow/20 bg-brand-yellow/[0.06] px-5 py-3.5"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ffe100" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" className="shrink-0">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" />
+              </svg>
+              <p className="text-white/70 text-xs leading-snug">
+                <span className="text-white font-semibold">100% community-focused.</span> Every contribution goes toward real support for the people who need it most.
+              </p>
             </motion.div>
           </motion.div>
 
