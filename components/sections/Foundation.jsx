@@ -55,6 +55,16 @@ export default function Foundation() {
     <section id="foundation" className="relative bg-brand-navy-dark overflow-hidden">
       {/* Top yellow accent line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow z-20" />
+      {/* Faded background photo */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/blog-market-2026.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none select-none"
+      />
+      {/* Navy wash to keep text readable over the photo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy-dark/85 via-brand-navy-dark/70 to-brand-navy-dark/90 pointer-events-none" />
       {/* Grid + glow atmosphere */}
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
       <div className="absolute -top-40 -right-24 w-[36rem] h-[36rem] bg-brand-yellow/[0.06] rounded-full blur-3xl pointer-events-none" />
