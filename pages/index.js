@@ -10,6 +10,7 @@ import Gallery from '../components/sections/Gallery'
 import Reviews from '../components/sections/Reviews'
 import SellWithUs from '../components/sections/SellWithUs'
 import SellForm from '../components/sections/SellForm'
+import Foundation from '../components/sections/Foundation'
 import Blog from '../components/sections/Blog'
 import Contact from '../components/sections/Contact'
 import ContactForm from '../components/sections/ContactForm'
@@ -32,6 +33,7 @@ export default function Home() {
       <Reviews />
       <SellWithUs />
       <SellForm />
+      <Foundation />
       <Blog />
       <Contact />
       <ContactForm />
