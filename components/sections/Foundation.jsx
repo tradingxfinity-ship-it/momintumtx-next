@@ -58,10 +58,10 @@ export default function Foundation() {
       {/* Faded background photo */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/blog-market-2026.png"
+        src="/foundation-hands.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.12] pointer-events-none select-none"
       />
       {/* Navy wash to keep text readable over the photo */}
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy-dark/85 via-brand-navy-dark/70 to-brand-navy-dark/90 pointer-events-none" />
