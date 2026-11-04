@@ -5,6 +5,191 @@ const ease = [0.22, 1, 0.36, 1]
 
 const posts = [
   {
+    category: 'Hobby News',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    title: '6,451 Graded Cards Vanish After a FedEx Truck Is Stolen Outside PSA',
+    excerpt: 'A FedEx truck was stolen outside PSA headquarters in Santa Ana on October 13. PSA says 6,451 slabbed cards are gone, and the FBI has joined the investigation. Here is what collectors should know.',
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '4 min read',
+    thumb: { type: 'photo', src: '/blog-fedex-truck.jpg', overlay: 'from-brand-navy-dark/60 via-transparent to-transparent' },
+    credit: {
+      caption: 'A FedEx delivery truck, for illustration only. This is not the truck involved in the theft.',
+      source: 'Photo: Raysonho, CC0, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:FedExTruck8.jpg',
+    },
+    content: [
+      { type: 'p', text: "Sending a card off for grading always involves a little trust. You hand over something valuable, and you wait for it to come back in a slab. For the owners of thousands of cards, that process ended in the worst way possible this fall." },
+      { type: 'p', text: "According to Sports Collectors Digest, a FedEx truck was stolen on October 13 while it was parked outside PSA's headquarters in Santa Ana, California. PSA has confirmed that 6,451 slabbed cards were taken. Two full pallets were wiped out and a third was disrupted." },
+      { type: 'h3', text: 'The stars of the hobby were on board' },
+      { type: 'p', text: "The stolen cards read like a list of the most collected names in the hobby. By card count, the most-affected players are Victor Wembanyama (202 cards), Michael Jordan (186), Cooper Flagg (96), Shohei Ohtani (86) and Roman Reigns (82)." },
+      { type: 'h3', text: 'The losses are personal' },
+      { type: 'p', text: "Sports Collectors Digest spoke with collectors who lost cards. Alessandro Spennato had 82 cards in his submission, including eight 1-of-1s, seven of them Roman Reigns cards. He puts his loss at $75,000 and calls that a low-end estimate. Skyler Bennett lost 104 cards. He had declared a maximum insured value of $156,000 and paid $8,467.60 in grading fees." },
+      { type: 'p', text: "For a 1-of-1, money only goes so far. A replacement doesn't exist, which is why this theft has hit the community so hard." },
+      { type: 'h3', text: 'What PSA has done so far' },
+      { type: 'p', text: "In an October 23 social media post, PSA said it had refunded all grading fees on the impacted orders and deactivated the certification numbers of the stolen cards. PSA also said the FBI has joined the Santa Ana Police Department in the investigation." },
+      { type: 'h3', text: 'How to protect yourself as a buyer' },
+      { type: 'p', text: "These cards are slabbed, so they could look perfectly normal in a listing or at a show. Before you buy a high-end PSA slab, look up its certification number on PSA's website and make sure the result matches the card in front of you. A number that doesn't check out is a reason to walk away." },
+      { type: 'p', text: "Stolen-card databases can help too. Sports Collectors Digest points to Kapture, a searchable database of stolen cards launched by Morgan Thomas. It's another quick check on an expensive card, especially a low-numbered one that would be easy to recognize." },
+      { type: 'h3', text: 'How to protect yourself as a submitter' },
+      { type: 'p', text: "Nobody can fully eliminate shipping risk, but you can make a loss easier to deal with. Photograph the front and back of every card before it leaves your hands, keep your submission records, declare an accurate value, and check what your insurance really covers while cards are in transit or at a grader." },
+      { type: 'h3', text: 'A tough stretch for PSA' },
+      { type: 'p', text: "The theft comes during an already busy period for the company. PSA said on October 28 that its backlog has fallen from more than 10 million cards in May to 7.2 million. It also cut estimated turnaround times by 20 days for new submissions and reopened its Value service at $39.99 in the US, with an estimated 90 to 100 business days. If you've been waiting to submit, there's finally some good news, but plan on a long wait." },
+      { type: 'tip', text: "Looking at a high-end slab and want a second opinion? Bring it to Momintum and we'll go through it with you before you spend the money." },
+    ],
+  },
+  {
+    category: 'Auction Results',
+    categoryColor: 'bg-amber-100 text-amber-700',
+    title: 'Michael Jordan 1998 Finals Jersey Sells for $14 Million in a Private Deal',
+    excerpt: "Jordan's game-worn, autographed jersey from Game 2 of the 1998 NBA Finals sold for $14 million. Hunt Auctions calls it the highest price ever paid for basketball memorabilia.",
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '4 min read',
+    thumb: { type: 'card', bg: 'from-red-800 to-slate-900', src: '/blog-jordan-jersey.jpg' },
+    credit: {
+      caption: "Michael Jordan in the Bulls' red road jersey in 1997. This is not the jersey that was sold.",
+      source: 'Photo: Steve Lipofsky, CC BY-SA 3.0, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Steve_Lipfosky_--_Michael_Jordan_(1997).jpg',
+    },
+    content: [
+      { type: 'p', text: "Michael Jordan's final run with the Bulls keeps setting records nearly three decades later. A game-worn, autographed red road jersey from the 1998 NBA Finals has sold for $14 million, according to The Associated Press. Hunt Auctions, which handled the sale, says that's the highest price ever paid for a piece of basketball memorabilia." },
+      { type: 'h3', text: 'The jersey' },
+      { type: 'p', text: "Jordan wore this jersey in Game 2 against the Utah Jazz on June 5, 1998, a Bulls win that evened the series at 1-1. Hunt Auctions says a private collector bought it from the Bulls in 2003 and that it has changed hands only once since that first purchase. For a piece at this level, a short and clear ownership history matters a lot." },
+      { type: 'h3', text: 'A private sale, not an auction' },
+      { type: 'p', text: "This wasn't a public auction with a room full of bidders. It was a private treaty sale, arranged directly by Hunt Auctions. The buyer is Miami real estate investor Ron Firman. That matters when you compare prices: a private sale figure comes from the parties involved rather than from open bidding, and the record claim comes from the auction house." },
+      { type: 'h3', text: 'The 1998 Finals market' },
+      { type: 'p', text: "This is at least the third Jordan jersey from the 1998 Finals to pass $10 million, and each one has gone higher than the last:" },
+      { type: 'p', text: "The Game 1 jersey sold for about $10.1 million in 2022. The Game 3 jersey brought about $12.3 million at auction in September. Now the Game 2 jersey has reached $14 million. The market has also valued his footwear from the same game: Sotheby's sold a pair of Air Jordans from Game 2 for $2.2 million in 2023." },
+      { type: 'h3', text: 'Where it ranks overall' },
+      { type: 'p', text: "As big as $14 million is, it isn't the top price for a game-worn jersey. AP reports it's the second-biggest known price, behind the $24.12 million paid in 2024 for the Babe Ruth jersey from the 1932 World Series \"called shot\" game. Baseball still holds the overall record, while Jordan now sets the bar for basketball." },
+      { type: 'h3', text: 'Why it matters to everyday collectors' },
+      { type: 'p', text: "Very few of us will ever buy an eight-figure jersey. But sales like this show what the top of the market values most: a historic moment, a player everyone knows, and a clear ownership trail. Those same ideas apply at any budget. Know what you're buying, know where it came from, and keep your documentation." },
+      { type: 'tip', text: "Jordan collector? Momintum buys and sells across eras. Stop in and show us what you're hunting for, or what you've already found." },
+    ],
+  },
+  {
+    category: 'Auction Results',
+    categoryColor: 'bg-amber-100 text-amber-700',
+    title: 'A Restored T206 Honus Wagner Sells for $1.98 Million at Heritage',
+    excerpt: "Even restored, the hobby's most famous card brought a record $1.98 million in Heritage's $25.6 million Fall Sports Catalog Auction, which also set a record for a wrestling championship belt.",
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '4 min read',
+    thumb: { type: 'card', bg: 'from-amber-600 to-slate-900', src: '/blog-t206-wagner.jpg' },
+    credit: {
+      caption: 'A T206 Honus Wagner card, c. 1909-11. This is a different copy from the restored card sold at Heritage.',
+      source: 'Image: public domain, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Honus_wagner_t206_baseball_card.jpg',
+    },
+    content: [
+      { type: 'p', text: "The T206 Honus Wagner is the card even non-collectors have heard of. It's scarce, more than a century old, and has been famous in the hobby for generations. Now another copy has set a record, and it did so with a major condition issue." },
+      { type: 'p', text: "According to Sports Collectors Digest, a restored 1909-11 T206 White Border Wagner sold for $1.98 million in Heritage Auctions' Fall Sports Catalog Auction. That's a record for a restored Wagner." },
+      { type: 'h3', text: 'Why restoration matters' },
+      { type: 'p', text: "In most of the hobby, restoration is a serious negative. A card that has been altered usually sells for far less than an unaltered card of similar appearance, and buyers often avoid it altogether. So a seven-figure price for a restored card says a lot about the Wagner. Very few copies exist, and those that come to market in any condition draw attention." },
+      { type: 'p', text: "It's also a useful reminder to know exactly what you're buying. Restoration isn't automatically a deal-breaker, but it should always be disclosed and reflected in the price." },
+      { type: 'h3', text: 'The wrestling record' },
+      { type: 'p', text: "The Wagner shared the spotlight with a big result from the wrestling ring. The 1985-88 WWE Intercontinental Championship belt sold for $716,750, which Sports Collectors Digest calls a record for a championship wrestling belt. Conrad Thompson was the buyer." },
+      { type: 'p', text: "The belt's history helps explain the price. It's tied to Tito Santana, \"Macho Man\" Randy Savage, Ricky Steamboat and The Honky Tonk Man, a run that includes the Savage-Steamboat match at WrestleMania III on March 29, 1987, one of the most celebrated matches in wrestling history." },
+      { type: 'h3', text: 'Wrestling memorabilia is having a moment' },
+      { type: 'p', text: "This wasn't a one-off. A match-worn Stone Cold Steve Austin knee brace sold for $225,700 in the same auction after 39 bids. Earlier in 2026, Hulk Hogan's WrestleMania I boots brought $1,037,000 in February, and his WrestleMania II belt sold for $414,800 in August." },
+      { type: 'h3', text: 'The bigger picture' },
+      { type: 'p', text: "The auction totaled $25.6 million, and the two headline lots came from very different corners of collecting: a tobacco card from the early 1900s and a belt from the 1980s. What connects them is a story collectors already know and love. That's as good a test as any when you're deciding what belongs in your own collection." },
+      { type: 'tip', text: "Have older cards and not sure whether they've been altered? Bring them by Momintum and we'll take a look with you." },
+    ],
+  },
+  {
+    category: 'Auction Results',
+    categoryColor: 'bg-amber-100 text-amber-700',
+    title: 'A 1962 Topps Football Set Just Sold for $1.47 Million',
+    excerpt: "The top-ranked 1962 Topps Football set on PSA's All-Time Finest registry sold for $1.47 million at Mile High Card Company, making it the most valuable football set in the hobby.",
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '3 min read',
+    thumb: { type: 'spread', bg: 'from-slate-700 to-slate-950', cards: ['/blog-1962-topps-tittle.jpg', '/blog-1962-topps-starr.jpg', '/blog-1962-topps-dale.jpg'] },
+    credit: {
+      caption: 'Y.A. Tittle, Bart Starr and Carroll Dale cards from the 1962 Topps Football set. These are not the copies sold.',
+      source: 'Images: public domain, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Bart_Starr_1962.jpg',
+    },
+    content: [
+      { type: 'p', text: "Most record-setting card stories are about a single card. This one is about patience. A near-complete 1962 Topps Football set has sold for $1.47 million at Mile High Card Company, and Sports Collectors Digest reports that it's now the most valuable football set in the hobby." },
+      { type: 'h3', text: 'What sold' },
+      { type: 'p', text: "The set holds 175 of the 176 cards and ranks first on PSA's All-Time Finest Set Registry, with a GPA of 9.337. It drew 54 bids in Mile High's Fall Auction, a sale of 3,100 lots." },
+      { type: 'p', text: "A GPA above 9 means that, on average, these cards grade at Mint or better. For cards printed more than 60 years ago, that takes years of hunting, and sometimes a lot of luck." },
+      { type: 'h3', text: 'Why this set is so hard' },
+      { type: 'p', text: "One look at a 1962 Topps Football card shows you the challenge. Those black borders are striking, but they show every chip, nick and rub. Kids in 1962 weren't thinking about condition, so clean copies were hard to come by even before collectors started competing for them." },
+      { type: 'p', text: "The set's look helps explain the appeal too. Each card pairs a color portrait with a black-and-white action shot, and the checklist includes names like Bart Starr and Y.A. Tittle, along with the Mike Ditka rookie." },
+      { type: 'h3', text: 'Other big results from the sale' },
+      { type: 'p', text: "The football set wasn't the only highlight. A 1933 Sport Kings Gum Babe Ruth graded SGC 9 sold for $833,138. A break of a T206 Polar Bear Back set totaled $529,913, a 1958 Topps Complete Master Set brought $360,913, and a 1960 Topps Hank Aaron in PSA 8.5 sold for $55,163." },
+      { type: 'h3', text: 'The takeaway for set builders' },
+      { type: 'p', text: "Modern collecting gets a lot of attention, with its 1-of-1s and chase cards. This sale shows that building a set the old-fashioned way can still pay off. It doesn't have to be a $1 million project, either. Choose a set you love, learn its condition traps, and upgrade one card at a time." },
+      { type: 'tip', text: "Working on a vintage set? Bring your want list to Momintum and we'll help you find your next piece." },
+    ],
+  },
+  {
+    category: 'Auction Results',
+    categoryColor: 'bg-amber-100 text-amber-700',
+    title: "Shohei Ohtani's Tokyo Series Jersey Sells for $2.05 Million",
+    excerpt: "Ohtani's game-worn jersey from the Dodgers' 2025 Tokyo Series opener sold for $2,055,700, passing Aaron Judge's $1.792 million debut uniform for a public auction record.",
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '3 min read',
+    thumb: { type: 'card', bg: 'from-blue-700 to-slate-900', src: '/blog-ohtani-tokyo-series.jpg' },
+    credit: {
+      caption: 'Shohei Ohtani warming up at Tokyo Dome during the MLB Tokyo Series, March 15, 2025. This is not the jersey that was sold.',
+      source: 'Photo: ウィ貴公子, CC BY-SA 4.0, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E8%B0%B7%E7%BF%94%E5%B9%B3_MLB_Tokyo_Series_by_Guggenheim_Pre-season_games_Los_Angeles_Dodgers_vs_%E8%AA%AD%E5%A3%B2%E3%82%B8%E3%83%A3%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%84_%E6%9D%B1%E4%BA%AC%E3%83%89%E3%83%BC%E3%83%A0_2025%E5%B9%B43%E6%9C%8815%E6%97%A5%E3%81%AE%E6%9D%B1%E4%BA%AC_202503151726_DSCN2723.jpg',
+    },
+    content: [
+      { type: 'p', text: "Few athletes move the collectibles market like Shohei Ohtani, and his latest record comes from a jersey with a very special story. A Dodgers jersey Ohtani wore in the 2025 Tokyo Series has sold for $2,055,700 on The Realest's auction platform, according to the California Post via Yahoo Sports." },
+      { type: 'h3', text: 'What makes this jersey special' },
+      { type: 'p', text: "Ohtani wore it on March 18, 2025, when the Dodgers played the Chicago Cubs at the Tokyo Dome. Playing in Japan in front of his home country's fans would have been enough to make it desirable, but there's more to it." },
+      { type: 'p', text: "The jersey carries the first-ever Gold MLB Logoman patch. Ohtani also later signed it and added inscriptions marking the date of the game and his 2025 NL MVP award. That combination of a historic game, a first-of-its-kind patch and the player's own notes is what high-end buyers look for." },
+      { type: 'h3', text: 'Understanding the record' },
+      { type: 'p', text: "Officials say the sale set a public auction record for a 21st-century game-used baseball jersey. It passed the $1.792 million paid for Aaron Judge's MLB debut uniform." },
+      { type: 'p', text: "That wording is specific for a reason. The record covers public auctions of baseball jerseys from this century, so it doesn't compare with vintage pieces or private deals. Records like this often come with fine print, and it's always worth reading." },
+      { type: 'h3', text: 'The patch connection' },
+      { type: 'p', text: "If the Gold Logoman name sounds familiar to card collectors, there's good reason. Logoman patch cards are among the most coveted hits in the hobby, and the same logo patch now anchors one of the biggest jersey sales of the modern era. It's a sign of how closely the card and memorabilia markets have grown together." },
+      { type: 'h3', text: 'Ohtani remains the benchmark' },
+      { type: 'p', text: "Ohtani has a rare two-market appeal, with enormous followings in both the US and Japan. This sale is another piece of evidence that his demand reaches well beyond cards. For collectors, the lesson is familiar: a great player helps, but a great moment can take a piece to another level." },
+      { type: 'tip', text: "Chasing Ohtani cards at any budget? Stop by Momintum and we'll help you figure out which ones fit your collection." },
+    ],
+  },
+  {
+    category: 'Market Watch',
+    categoryColor: 'bg-purple-100 text-purple-700',
+    title: 'Kimi Antonelli SuperFractor Sells for $878,400, the No. 2 F1 Card Sale Ever',
+    excerpt: "A 1-of-1 Antonelli autograph from 2025 Topps Chrome F1 topped the week's sports card sales at Goldin, beating Tom Brady and LeBron James and falling just short of Lewis Hamilton's record.",
+    author: 'Momintum Team',
+    date: 'Nov 4, 2026',
+    readTime: '3 min read',
+    thumb: { type: 'photo', src: '/blog-antonelli.jpg', position: 'center 20%', overlay: 'from-slate-900/50 via-transparent to-transparent' },
+    credit: {
+      caption: 'Kimi Antonelli celebrating after the 2026 Chinese Grand Prix. The card itself is not pictured.',
+      source: 'Photo: Liauzh, CC BY 4.0, via Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:2026_Chinese_GP_-_Mercedes_-_Kimi_Antonelli_-_Post_Race_Celebration.jpg',
+    },
+    content: [
+      { type: 'p', text: "Formula 1 cards are no longer a niche corner of the hobby. A 2025 Topps Chrome F1 Chrome Autographs SuperFractor of Mercedes driver Kimi Antonelli, numbered 1/1 and graded PSA 10, sold for $878,400 at Goldin on October 18." },
+      { type: 'h3', text: 'Second only to Hamilton' },
+      { type: 'p', text: "Sports Illustrated's Collectibles team, citing Card Ladder data, ranks it as the second-highest F1 card sale ever. The only higher sale is the 2020 Topps Chrome F1 Superfractor 1/1 of Lewis Hamilton in PSA 7, which brought $900,000 at Goldin in May 2022." },
+      { type: 'p', text: "That comparison shows how fast Antonelli's market has moved. Hamilton was a seven-time world champion when his card sold. Antonelli is at a far earlier point in his career and came within about $21,600 of that mark." },
+      { type: 'h3', text: 'Top of a very strong week' },
+      { type: 'p', text: "It also took the top spot in a week full of big names. Here is how the top five finished for October 12-18, according to SI:" },
+      { type: 'p', text: "1. Kimi Antonelli, 2025 Topps Chrome F1 SuperFractor Auto 1/1, PSA 10: $878,400" },
+      { type: 'p', text: "2. Tom Brady, 2000 Playoff Contenders Championship Ticket Auto /100, PSA 8: $854,000" },
+      { type: 'p', text: "3. LeBron James, 2021 Panini Flawless Logoman 1/1, BGS 9: $591,000" },
+      { type: 'p', text: "4. Shai Gilgeous-Alexander, 2024-25 Panini Flawless Game-Worn Patch Logoman Auto 1/1, PSA 10: $579,500" },
+      { type: 'p', text: "5. Patrick Mahomes, 2025 Panini Authentically Shield Auto 1/1: $500,218" },
+      { type: 'h3', text: 'Antonelli keeps climbing' },
+      { type: 'p', text: "This isn't the first big Antonelli result this year. A different 1-of-1, a Dynasty patch autograph, sold for about $202,000 at Goldin in April. That's a jump of more than four times in six months, though they're different cards, so it isn't a like-for-like comparison." },
+      { type: 'h3', text: 'A word of caution' },
+      { type: 'p', text: "A 1-of-1 sale tells you what two bidders would pay for one unique card on one day. It doesn't set the price for the rest of a player's market. If you're buying Antonelli's lower-numbered parallels or base rookies, check recent completed sales for that exact card, and remember that a young driver's market can swing with results and team news." },
+      { type: 'tip', text: "Curious about F1 cards? Stop in at Momintum and we'll talk through what's worth chasing and what's just hype." },
+    ],
+  },
+  {
     category: 'New Releases',
     categoryColor: 'bg-emerald-100 text-emerald-700',
     title: 'Pokémon TCG Turns 30: Why the 30th Celebration Set Could Be One of the Biggest Releases Yet',
@@ -583,7 +768,7 @@ function Thumbnail({ thumb }) {
     return (
       <div className="relative w-full h-full">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={thumb.src} alt="" aria-hidden="true" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+        <img src={thumb.src} alt="" aria-hidden="true" style={thumb.position ? { objectPosition: thumb.position } : undefined} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
         <div className={`absolute inset-0 bg-gradient-to-t ${thumb.overlay}`} />
       </div>
     )
@@ -646,14 +831,14 @@ function ArticleModal({ post, onClose }) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200 z-10"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200 z-20"
           >
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" width="14" height="14">
               <path d="M3 3l10 10M13 3L3 13" />
             </svg>
           </button>
           {/* Category */}
-          <div className="absolute bottom-4 left-5">
+          <div className="absolute bottom-4 left-5 z-20">
             <span className={`text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full ${post.categoryColor}`}>
               {post.category}
             </span>
@@ -701,6 +886,13 @@ function ArticleModal({ post, onClose }) {
               <p className="text-xs text-slate-400">{post.date}</p>
             </div>
           </div>
+
+          {post.credit && (
+            <p className="text-[11px] text-slate-400 leading-relaxed mt-4">
+              {post.credit.caption}{' '}
+              <a href={post.credit.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-600">{post.credit.source}</a>
+            </p>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -719,7 +911,7 @@ function PostCard({ post, delay, onClick }) {
     >
       <div className="relative overflow-hidden aspect-[16/9]">
         <Thumbnail thumb={post.thumb} />
-        <div className="absolute top-3 left-3">
+        <div className="absolute top-3 left-3 z-20">
           <span className={`text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full ${post.categoryColor}`}>
             {post.category}
           </span>
